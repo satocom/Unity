@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class StainBoy : Token {
 
+	public static int Count = 0;
+
 	// Use this for initialization
 	void Start () {
 
+		Count++;
 		SetSize (SpriteWidth / 2, SpriteHeight / 2);
 
 		// move at randome
@@ -33,7 +36,7 @@ public class StainBoy : Token {
 	}
 
 	public void OnMouseDown() {
-
+		Count--;
 		DestroyObj ();
 	}
 }
